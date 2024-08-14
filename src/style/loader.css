@@ -1,0 +1,48 @@
+.lol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensures the loader is vertically centered */
+}
+
+.loader {
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+/* Small screens */
+@media (max-width: 576px) {
+    .loader {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 577px) and (max-width: 768px) {
+    .loader {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 769px) {
+    .loader {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
